@@ -69,6 +69,10 @@ Media.get = function(id) {
     return mediaObjects[id];
 };
 
+Media.prototype.test = function(output) {
+    exec(null, null , "Media", "setAudioOutputDevice", [output]);
+}
+
 /**
  * Start or resume playing audio file.
  */
